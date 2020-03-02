@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="container">
+
+    <!--Logo-->
+    <div class="row">
+      <div class="header">
+        <img src="../static/pollster-logo-L.png" alt="Pollster" class="logo" width="525" height="auto">
+      </div>
+    </div>
+
+    <!--Form-->
+  	<div class="centered_form">
+      <form id="poll_info" action="{{ url_for('poll') }}" method='GET'>
+
+        <div class="row">
+
+          <div class="col">
+          </div>
+
+          <!--Placering/Enhet-->
+          <div class="col-lg-3 px-4">
+            <label for="unit">Placering</label>
+            <input class="form-control" id="location" name="location"  >
+          </div>
+
+          <!--Fråga-->
+          <div class="col-lg-3 px-4">
+            <label for="question">Fråga</label>
+            <input class="form-control" id="question" name="question" >
+          </div>
+
+          <div class="col">
+          </div>
+
+        </div>
+
+        <!--Button-->
+        <div class="row">
+          <div class="col">
+            <div class="button_holder">
+              <br>
+              <button form="poll_info" type="submit" class="btn btn-primary">Skicka</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+  	</div>
+
+    <a href="#"><img src="..\static\toggle_up.png" class="toggle_modal" data-toggle="modal" data-target="#exampleModal" height="35" width="auto"></a>
+
+  </div>
+
+
+
+{% endblock %}

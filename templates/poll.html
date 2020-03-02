@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+  <!--Logo-->
+  <div class="row">
+    <div class="header">
+       {{question}}
+    </div>
+  </div>
+
+  <!--Form-->
+  <div class="centered_form">
+
+      <div class="row">
+        <!--Happy face-->
+        <div class="col">
+          <img id="happy_img" src="../static/happy.png" alt="Happy" class="poll_buttons" width="200" height="auto" onclick="updateHappyCounter()">
+        </div>
+
+        <!--Fråga-->
+        <div class="col">
+          <img id="sad_img" src="../static/sad.png" alt="Sad" class="poll_buttons" width="200" height="auto" onclick="updateSadCounter()">
+        </div>
+
+      </div>
+
+      <div class="row">
+        <!--Sad face-->
+        <div class="col">
+          <p id="happy_counter" align="center">0</p>
+        </div>
+
+        <!--Fråga-->
+        <div class="col">
+          <p id="sad_counter" align="center">0</p>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    var happy_count = document.getElementById("happy_counter").innerHTML;
+    var sad_count = document.getElementById("sad_counter").innerHTML;
+
+    function updateHappyCounter() {
+          happy_count++;
+          document.getElementById("happy_counter").innerHTML = happy_count;
+    }
+
+    function updateSadCounter() {
+          sad_count++;
+          document.getElementById("sad_counter").innerHTML = sad_count;
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+html, body{
+	background-color: #110051;
+	height: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.jumbotron{
+	background-color:transparent !important;
+	color:#FF8C00;
+}
+
+.container{
+	color:#FF8C00;
+
+}
+
+.poll_buttons{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header{
+	 position: absolute;
+     top: 20%;
+     right: 0;
+     left: 0;
+	 transform: translateY(-50%);
+	 font-size:2em;
+	 color:#FF8C00;
+	 text-align:center;
+}
+
+.logo{
+	max-width: 80%;
+	height: auto;
+}
+
+.small-logo-holder{
+	position: absolute;
+		top: 5%;
+		right: 0;
+		left: 0;
+	transform: translateY(-50%);
+	font-size:2em;
+	color:#FF8C00;
+	text-align:center;
+}
+
+.lubba_holder{
+	 position: absolute;
+     top: 65%;
+     right: 0;
+     left: 0;
+	 transform: translateY(-50%);
+	 font-size:4em;
+	 font-weight:bold;
+	 color:cyan;
+	 text-align:center;
+}
+
+.countdown{
+	 position: absolute;
+     top: 50%;
+     right: 0;
+     left: 0;
+	 transform: translateY(-50%);
+	 font-size:5em;
+	 font-weight:bold;
+	 color:cyan;
+	 text-align:center;
+}
+
+.centered_form{
+	 position: absolute;
+     top: 50%;
+     right: 0;
+     left: 0;
+	 transform: translateY(-50%);
+	 font-size:1em;
+	 color:cyan;
+	 text-align:left;
+}
+
+.stations{
+	 position: absolute;
+     top: 30%;
+     right: 0;
+     left: 0;
+	 transform: translateY(-50%);
+	 font-size:1em;
+	 color:cyan;
+	 text-align:right;
+}
+
+.button_holder{
+	text-align:center;
+}
+
+.more_stations{
+	 position: absolute;
+     top: 20%;
+     right: 0;
+     left: 0;
+	 transform: translateY(-50%);
+	 font-size:1em;
+	 font-weight:bold;
+	 color:#FF8C00;
+	 text-align:center;
+}
+
+.toggle_modal{
+	position: absolute;
+		left: 50%;
+		bottom: 2%;
+	transform: translateX(-50%);
+	color:#FF8C00;
+	text-align:center;
+}
+
+
+.direction{
+	transform: rotate(90deg);
+}
