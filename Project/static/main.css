@@ -5,6 +5,12 @@ html, body{
 	overflow-x: hidden;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+	color:#FF8C00;
+}
+
 .jumbotron{
 	background-color:transparent !important;
 	color:#FF8C00;

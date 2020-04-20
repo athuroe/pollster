@@ -16,12 +16,12 @@
       <div class="row">
         <!--Happy face-->
         <div class="col">
-          <img id="happy_img" src="../static/happy.png" alt="Happy" class="poll_buttons" width="200" height="auto" onclick="updateHappyCounter()">
+          <img id="happy" src="../static/happy.png" alt="Happy" class="poll_buttons" width="200" height="auto" onclick="updateHappyCounter()">
         </div>
 
         <!--Fråga-->
         <div class="col">
-          <img id="sad_img" src="../static/sad.png" alt="Sad" class="poll_buttons" width="200" height="auto" onclick="updateSadCounter()">
+          <img id="sad" src="../static/sad.png" alt="Sad" class="poll_buttons" width="200" height="auto" onclick="updateSadCounter()">
         </div>
 
       </div>
@@ -54,6 +54,27 @@
           sad_count++;
           document.getElementById("sad_counter").innerHTML = sad_count;
     }
+
+    $(function(){
+    	$('.poll_buttons').click(function(){
+    		var face_clicked = $(this).attr("id");
+        var json_payload = [{"face":face_clicked}]
+        console.log(json_payload);
+    		$.ajax({
+    			url: "/add_one?location={{location}}&question={{question}}",
+    			data: JSON.stringify(json_payload),
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+    			type: 'POST',
+          success: function(response){
+    				console.log(response);
+    			},
+
+    		});
+    	});
+    });
 </script>
+
+
 
 {% endblock %}
